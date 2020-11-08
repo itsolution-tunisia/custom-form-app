@@ -1,5 +1,5 @@
 # To Use:
-1. Install
+# 1. Install
 
 `sudo su - edxapp -s /bin/bash`
 
@@ -22,14 +22,14 @@ to fix some migration error
 
 ->                ('user', models.OneToOneField(null=True, to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)),
 
-2. Add parameters
+# 2. Add parameters
 In /edx/etc/lms.yml file:
 
 `ADDL_INSTALLED_APPS: ["custom_reg_form"]`
 
 `REGISTRATION_EXTENSION_FORM: custom_reg_form.forms.ExtraInfoForm`
 
-3. Migrate DB
+# 3. Migrate DB
 
 `cd /edx/app/edxapp/edx-platform`
 
@@ -37,6 +37,6 @@ In /edx/etc/lms.yml file:
 
 `python /edx/app/edxapp/edx-platform/manage.py lms makemigrations custom_reg_form --settings=production`
 
-4. Restart LMS
+# 4. Restart LMS
 
 `sudo /edx/bin/supervisorctl restart lms`
