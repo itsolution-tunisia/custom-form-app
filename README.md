@@ -1,4 +1,5 @@
 # To Use:
+Add registration form custom filds {favorite movie(text), favorite_editor(Select)} 
 # 1. Install
 
 `sudo su - edxapp -s /bin/bash`
@@ -10,17 +11,6 @@
 `git clone https://github.com/itsolution-tunisia/custom-form-app`
 
 `pip install -e custom-form-app`
-
-Note:
-to fix some migration error
-
-`vi /edx/app/edxapp/custom-form-app/custom_reg_form/models.py`
-
-->     user = models.OneToOneField(USER_MODEL, null=True, on_delete=models.PROTECT)
-
-`vi /edx/app/edxapp/custom-form-app/custom_reg_form/migrations/0001_initial.py`
-
-->                ('user', models.OneToOneField(null=True, to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)),
 
 # 2. Add parameters
 In /edx/etc/lms.yml file:
