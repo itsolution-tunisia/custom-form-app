@@ -1,10 +1,11 @@
 # To Use:
 1. Install
-`sudo su - edxapp -s /bin/bash
-cd ~/
-. edxapp_env
-git clone https://github.com/itsolution-tunisia/custom-form-app
-pip install -e custom-form-app`
+
+`sudo su - edxapp -s /bin/bash`
+`cd ~/`
+`. edxapp_env`
+`git clone https://github.com/itsolution-tunisia/custom-form-app`
+`pip install -e custom-form-app`
 
 Note:
 to fix some migration error
