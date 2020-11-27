@@ -16,8 +16,9 @@ class Migration(migrations.Migration):
             name='ExtraInfo',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('favorite_movie', models.CharField(max_length=100, verbose_name=b'Fav Flick', error_messages={b'required': 'Please tell us your favorite movie.', b'invalid': "We're pretty sure you made that movie up."})),
-                ('favorite_editor', models.CharField(blank=True, max_length=5, verbose_name=b'Favorite Editor', choices=[(b'vim', b'Vim'), (b'emacs', b'Emacs'), (b'np', b'Notepad'), (b'cat', b'cat > filename')])),
+                ('member_org_inst', models.CharField(blank=True, max_length=5, verbose_name=b'Are you a member of an organization/institution', error_messages={b'required': 'Please tell us if your are a member of an organization/institution..', b'invalid': "Please enter the membership information."}, choices=[(b'0', b'No'), (b'1', b'Yes')])),
+                ('org_inst', models.CharField(max_length=100, verbose_name=b'Organization/Institution name', error_messages={b'required': 'Please tell us the organization/institution you are a member of.', b'invalid': "Invalid entrie."})),
+                ('tel', models.CharField(max_length=100, verbose_name=b'Tel', error_messages={b'required': 'Please tell us your telephone number.', b'invalid': "Invalid telephone number."})),
                 ('user', models.OneToOneField(null=True, to=settings.AUTH_USER_MODEL, on_delete=models.PROTECT)),
             ],
         ),
