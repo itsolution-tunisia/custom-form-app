@@ -23,10 +23,12 @@ In /edx/etc/lms.yml file:
 
 `cd /edx/app/edxapp/edx-platform`
 
-`python /edx/app/edxapp/edx-platform/manage.py lms syncdb --migrate --settings=production`
-
 `python /edx/app/edxapp/edx-platform/manage.py lms makemigrations custom_reg_form --settings=production`
 
-# 4. Restart LMS
+`python /edx/app/edxapp/edx-platform/manage.py lms migrate custom_reg_form --settings=production`
+
+# 4. Restart LMS and EDX
 
 `sudo /edx/bin/supervisorctl restart lms`
+
+`sudo /edx/bin/supervisorctl restart edxapp_worker:`
