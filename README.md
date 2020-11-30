@@ -38,27 +38,27 @@ In /edx/etc/lms.yml file:
 # 4. Form fields translation
 In en/LC_MESSAGES/django.po file:
 
-`msgid "Organization/Institution name"
-msgstr ""
+`msgid "Organization/Institution name"`
+`msgstr ""`
 
-msgid "Please tell us your telephone number."
-msgstr ""
+`msgid "Please tell us your telephone number."`
+`msgstr ""`
 
-msgid "Invalid telephone number."
-msgstr ""
+`msgid "Invalid telephone number."`
+`msgstr ""`
 
-msgid "Phone number"
-msgstr ""`
+`msgid "Phone number"`
+`msgstr ""`
 
 In ar/LC_MESSAGES/django.po file:
-`msgid "Organization/Institution name"
-msgstr "اسم المنظمة/المؤسسة"
+`msgid "Organization/Institution name"`
+`msgstr "اسم المنظمة/المؤسسة"`
 
-msgid "Please tell us your telephone number."
-msgstr "من فضلك أدخل رقم هاتفك."
+`msgid "Please tell us your telephone number."`
+`msgstr "من فضلك أدخل رقم هاتفك."`
 
-msgid "Invalid telephone number."
-msgstr "رقم الهاتف غير صحيح."
+`msgid "Invalid telephone number."`
+`msgstr "رقم الهاتف غير صحيح."`
 
-msgid "Phone number"
-msgstr "رقم الهاتف"`
+`msgid "Phone number"`
+`msgstr "رقم الهاتف"`
