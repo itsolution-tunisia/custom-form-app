@@ -1,5 +1,7 @@
 from .models import ExtraInfo
 from django.forms import ModelForm
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_noop
 
 class ExtraInfoForm(ModelForm):
     """
@@ -7,21 +9,12 @@ class ExtraInfoForm(ModelForm):
     """
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
-        self.fields['member_org_inst'].error_messages = {
-            "required": u"Please tell us if your are a member of an organization/institution.",
-            "invalid": u"Please enter the membership information.",
-        }
-        
-        self.fields['org_inst'].error_messages = {
-            "required": u"Please tell us the organization/institution you are a member of.",
-            "invalid": u"Invalid entrie.",
-        }
 
         self.fields['tel'].error_messages = {
-            "required": u"Please tell us your telephone number.",
-            "invalid": u"Invalid telephone number.",
+            "required": _("Please tell us your telephone number."),
+            "invalid": _("Invalid telephone number."),
         }
 
     class Meta(object):
         model = ExtraInfo
-        fields = ('tel', 'member_org_inst', 'org_inst')
+        fields = ('tel', 'org_inst')
