@@ -35,30 +35,36 @@ In /edx/etc/lms.yml file:
 
 `sudo /edx/bin/supervisorctl restart edxapp_worker:`
 
-# 4. Form fields translation
+# 5. Form fields translation
+
 In en/LC_MESSAGES/django.po file:
 
-`msgid "Organization/Institution name"`
-`msgstr ""`
+```
+msgid "Organization/Institution name"
+msgstr ""
 
-`msgid "Please tell us your telephone number."`
-`msgstr ""`
+msgid "Please tell us your telephone number."
+msgstr ""
 
-`msgid "Invalid telephone number."`
-`msgstr ""`
+msgid "Invalid telephone number."
+msgstr ""
 
-`msgid "Phone number"`
-`msgstr ""`
+msgid "Phone number"\n
+msgstr ""
+```
 
 In ar/LC_MESSAGES/django.po file:
-`msgid "Organization/Institution name"`
-`msgstr "اسم المنظمة/المؤسسة"`
 
-`msgid "Please tell us your telephone number."`
-`msgstr "من فضلك أدخل رقم هاتفك."`
+```
+msgid "Organization/Institution name"
+msgstr "اسم المنظمة/المؤسسة"
 
-`msgid "Invalid telephone number."`
-`msgstr "رقم الهاتف غير صحيح."`
+msgid "Please tell us your telephone number."
+msgstr "من فضلك أدخل رقم هاتفك."
 
-`msgid "Phone number"`
-`msgstr "رقم الهاتف"`
+msgid "Invalid telephone number."
+msgstr "رقم الهاتف غير صحيح."
+
+msgid "Phone number"
+msgstr "رقم الهاتف"
+```
