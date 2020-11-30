@@ -25,10 +25,10 @@ Add registration form custom filds {favorite movie(text), favorite_editor(Select
 # 3. Add parameters
 In /edx/etc/lms.yml file:
 
-`ADDL_INSTALLED_APPS: ["custom_reg_form"]`
-
-`REGISTRATION_EXTENSION_FORM: custom_reg_form.forms.ExtraInfoForm`
-
+```
+ADDL_INSTALLED_APPS: ["custom_reg_form"]
+REGISTRATION_EXTENSION_FORM: custom_reg_form.forms.ExtraInfoForm
+```
 # 4. Restart LMS and EDX
 
 `sudo /edx/bin/supervisorctl restart lms`
