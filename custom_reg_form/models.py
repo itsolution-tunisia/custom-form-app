@@ -1,5 +1,7 @@
 from django.conf import settings
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext_noop
 
 # Backwards compatible settings.AUTH_USER_MODEL
 USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
@@ -16,17 +18,11 @@ class ExtraInfo(models.Model):
         ('1', 'Yes'),
     )
 
-    member_org_inst = models.CharField(
-        verbose_name="Are you a member of an organization/institution",
-        choices=MEMBER_ORGANIZATION_INSTITUTION,
-        blank=False, 
-        max_length=5,
-    )
     org_inst = models.CharField(
-        verbose_name="Organization/Institution name",
+        verbose_name=_("Organization/Institution name"),
         max_length=100,
     )
     tel = models.CharField(
-        verbose_name="Tel",
+        verbose_name=_("Phone number"),
         max_length=100,
     )
