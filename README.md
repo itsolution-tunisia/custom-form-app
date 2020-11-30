@@ -12,14 +12,7 @@ Add registration form custom filds {favorite movie(text), favorite_editor(Select
 
 `pip install -e custom-form-app`
 
-# 2. Add parameters
-In /edx/etc/lms.yml file:
-
-`ADDL_INSTALLED_APPS: ["custom_reg_form"]`
-
-`REGISTRATION_EXTENSION_FORM: custom_reg_form.forms.ExtraInfoForm`
-
-# 3. Migrate DB
+# 2. Migrate DB
 
 `cd /edx/app/edxapp/edx-platform`
 
@@ -27,8 +20,45 @@ In /edx/etc/lms.yml file:
 
 `python /edx/app/edxapp/edx-platform/manage.py lms migrate custom_reg_form --settings=production`
 
+`exit`
+
+# 3. Add parameters
+In /edx/etc/lms.yml file:
+
+`ADDL_INSTALLED_APPS: ["custom_reg_form"]`
+
+`REGISTRATION_EXTENSION_FORM: custom_reg_form.forms.ExtraInfoForm`
+
 # 4. Restart LMS and EDX
 
 `sudo /edx/bin/supervisorctl restart lms`
 
 `sudo /edx/bin/supervisorctl restart edxapp_worker:`
+
+# 4. Form fields translation
+In en/LC_MESSAGES/django.po file:
+
+`msgid "Organization/Institution name"
+msgstr ""
+
+msgid "Please tell us your telephone number."
+msgstr ""
+
+msgid "Invalid telephone number."
+msgstr ""
+
+msgid "Phone number"
+msgstr ""`
+
+In ar/LC_MESSAGES/django.po file:
+`msgid "Organization/Institution name"
+msgstr "اسم المنظمة/المؤسسة"
+
+msgid "Please tell us your telephone number."
+msgstr "من فضلك أدخل رقم هاتفك."
+
+msgid "Invalid telephone number."
+msgstr "رقم الهاتف غير صحيح."
+
+msgid "Phone number"
+msgstr "رقم الهاتف"`
