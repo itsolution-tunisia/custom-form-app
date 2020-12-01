@@ -20,6 +20,7 @@ class ExtraInfo(models.Model):
 
     org_inst = models.CharField(
         verbose_name=_("Organization/Institution name"),
+        blank="True",
         max_length=100,
     )
     tel = models.CharField(
