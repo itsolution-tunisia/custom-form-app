@@ -1,5 +1,5 @@
 # To Use:
-Add registration form custom filds {favorite movie(text), favorite_editor(Select)} 
+Add registration form custom filds {Phone number(Required Text), "Organization/Institution name"(Optional Texte)} 
 # 1. Install
 
 `sudo su - edxapp -s /bin/bash`
